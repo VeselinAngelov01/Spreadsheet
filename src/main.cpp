@@ -1,7 +1,12 @@
-#include "../h/Controller.hpp"
+#include "../h/Controller.h"
+
+/// Main function to start program
 int main()
 {
-    Controller cnt;
-    cnt.Run();
+    
+    /// Github: https://github.com/VeselinAngelov01/Spreadsheet
+    Controller* controller=Controller::getController();
+    controller->Run();
+    delete controller;
     return 0;
 }

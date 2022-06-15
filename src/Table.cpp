@@ -1,4 +1,4 @@
-#include "../h/Table.hpp"
+#include "../h/Table.h"
 
 Table::Table()
 {

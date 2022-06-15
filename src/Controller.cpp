@@ -1,4 +1,15 @@
-#include "../h/Controller.hpp"
+#include "../h/Controller.h"
+
+Controller *Controller::controller = nullptr;
+
+Controller *Controller::getController()
+{
+    if(!controller)
+    {
+        controller = new Controller();
+    }
+    return controller;
+}
 
 Controller::Controller()
 {

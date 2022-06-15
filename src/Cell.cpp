@@ -1,4 +1,4 @@
-#include "../h/Cell.hpp"
+#include "../h/Cell.h"
 
 Cell::Cell(unsigned int row, unsigned int col, std::string value, int type)
 {
