@@ -7,6 +7,8 @@
 #include <queue>
 #include <stack>
 #include <cmath>
+
+
 class Cell
 {
 private:
@@ -23,8 +25,8 @@ public:
     /// 0 - int\n
     /// 1 - float\n
     /// 2 - string\n 
-    /// 3- formula\n 
-    /// 4- empty
+    /// 3 - formula\n 
+    /// 4 - empty
     int getType() const;
     ///Chnage current cell value
     void change(std::string value,int type);
