@@ -137,11 +137,20 @@ std::string Table::calculate(std::string value)
             }
             else
             {
-                std::string check = getValueAt(row-1,column-1);
-                if(getTypeAt(row,column)==2)
+                std::string check = getValueAt(row - 1, column - 1);
+                
+                if (getTypeAt(row-1, column-1) == 2)
                 {
-                    check = check.erase(0,1);
-                    check = check.erase(check.length()-1,1);
+                    if (check.length() <= 2)
+                    {
+                        check.erase(0);
+                        check += "0";
+                    }
+                    else
+                    {
+                        check = check.erase(0, 1);
+                        check = check.erase(check.length() - 1, 1);
+                    }
                 }
                 try
                 {

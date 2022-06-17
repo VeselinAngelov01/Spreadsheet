@@ -136,7 +136,6 @@ void Controller::Run()
             {
                 throw std::invalid_argument("No existing command!");
             }
-            // std::cin.ignore(10000, '\n');
         }
         catch (const std::exception &e)
         {
@@ -172,7 +171,7 @@ void Controller::open(std::vector<std::string> &params)
     {
         std::cout << "Do you want to save current file?(Y/N) ";
         std::string answ;
-        std::cin >> answ;
+        std::getline(std::cin,answ);
         while (true)
         {
             if (answ == "Y")
@@ -292,7 +291,7 @@ void Controller::close()
     {
         std::cout << "Do you want to save current file?(Y/N) ";
         std::string answ;
-        std::cin >> answ;
+        std::getline(std::cin,answ);
         while (true)
         {
             if (answ == "Y")
@@ -305,7 +304,7 @@ void Controller::close()
                 {
                     std::cout << "Enter name of file: ";
                     std::string name;
-                    std::cin >> name;
+                    std::getline(std::cin,name);
                     std::vector<std::string> params = {"NULL", name};
                     saveAs(params);
                 }
@@ -369,7 +368,7 @@ void Controller::save()
     {
         std::cout << "Enter name of file: ";
         std::string name;
-        std::cin >> name;
+        std::getline(std::cin,name);
         name+=".csv";
         std::vector<std::string> params = {"NULL", name};
         saveAs(params);
@@ -392,7 +391,7 @@ void Controller::exit()
     {
         std::cout << "Do you want to save current file?(Y/N) ";
         std::string answ;
-        std::cin >> answ;
+        std::getline(std::cin,answ);
         while (true)
         {
             if (answ == "Y")
@@ -405,7 +404,7 @@ void Controller::exit()
                 {
                     std::cout << "Enter name of file: ";
                     std::string name;
-                    std::cin >> name;
+                    std::getline(std::cin,name);
                     std::vector<std::string> params = {"NULL", name};
                     saveAs(params);
                 }
